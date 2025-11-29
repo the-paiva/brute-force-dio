@@ -1,6 +1,6 @@
-# 🐱‍💻 Estudo de Cibersegurança – Resumo sobre Kali Linux e Ataques Brute Force
+# Estudo de Cibersegurança – Resumo sobre Kali Linux e Ataques Brute Force
 
-## 1. 🔹 Introdução ao Kali Linux
+## 1. Introdução ao Kali Linux
 Kali Linux é uma distribuição baseada em Debian voltada para testes de penetração, análise forense e segurança ofensiva. Ele já vem com centenas de ferramentas pré-instaladas, divididas em categorias como:
 - *Information Gathering*
 - *Vulnerability Analysis*
@@ -13,7 +13,7 @@ Seu foco é facilitar o uso de ferramentas de ataque, automatizar processos e cr
 
 ---
 
-## 2. 🔹 Ataques Brute Force
+## 2. Ataques Brute Force
 O **brute force attack** (também conhecido como **ataque de força bruta**) consiste em tentar repetidamente combinações de credenciais (usuário/senha) até encontrar a correta.  
 É um ataque ruidoso, fácil de detectar, mas ainda muito usado quando:
 
@@ -29,9 +29,9 @@ O **brute force attack** (também conhecido como **ataque de força bruta**) con
 
 ---
 
-## 3. 🔹 Ferramentas do Kali Linux estudadas
+## 3. Ferramentas do Kali Linux estudadas
 
-### 🔸 3.1 Nmap
+### 3.1 Nmap
 Ferramenta de *network scanning* e *enumeration*.  
 Permite:
 - Mapear portas abertas
@@ -45,7 +45,7 @@ nmap -sV -A 192.168.0.10
 
 ---
 
-### 🔸 3.2 Medusa
+### 3.2 Medusa
 Ferramenta rápida de brute force em serviços de autenticação.  
 Permite ataques paralelos a protocolos como FTP, SSH, SMB, HTTP, etc.
 
@@ -56,7 +56,7 @@ medusa -h 192.168.0.10 -u admin -P /usr/share/wordlists/rockyou.txt -M ssh
 
 ---
 
-### 🔸 3.3 Ncrack
+### 3.3 Ncrack
 Voltada para ataques rápidos e modulares de brute force, focada em alta performance.  
 Indicado para:
 - RDP
@@ -70,7 +70,7 @@ ncrack -p ssh 192.168.0.10 -u root -P rockyou.txt
 
 ---
 
-### 🔸 3.4 John the Ripper (JtR)
+### 3.4 John the Ripper (JtR)
 Ferramenta para **quebra de hashes**, muito usada após obter arquivos de senhas.  
 Funciona com vários tipos de hash: MD5, SHA1, NTLM, bcrypt, etc.
 
@@ -85,7 +85,7 @@ john senha.hash
 
 ---
 
-### 🔸 3.5 WPScan
+### 3.5 WPScan
 Ferramenta específica para **WordPress**.  
 Permite:
 - Enumerar usuários
@@ -99,7 +99,7 @@ wpscan --url http://alvo.com --passwords rockyou.txt --usernames admin
 
 ---
 
-### 🔸 3.6 Patator
+### 3.6 Patator
 Ferramenta flexível e modular para brute force e fuzzing.  
 Vantagens:
 - Suporte a muitos protocolos
@@ -112,7 +112,7 @@ patator ssh_login host=192.168.0.10 user=admin password=FILE0 0=rockyou.txt
 
 ---
 
-### 🔸 3.7 smbclient
+### 3.7 smbclient
 Cliente que possibilita interação com compartilhamentos SMB/Samba.  
 Ajuda na:
 - Enumeração
@@ -125,7 +125,7 @@ smbclient -L 192.168.0.10 -N
 
 ---
 
-### 🔸 3.8 Metasploitable 2
+### 3.8 Metasploitable 2
 Máquina virtual vulnerável usada como alvo de testes.  
 Possui falhas em serviços como:
 - FTP
@@ -141,7 +141,7 @@ Serve como laboratório seguro para:
 
 ---
 
-### 🔸 3.9 Wordlists
+### 3.9 Wordlists
 Conjuntos de palavras usados em ataques de senha. O Kali inclui diversas listas em:
 ```
 /usr/share/wordlists
@@ -157,7 +157,7 @@ crunch
 
 ---
 
-## 4. 🔹 Password Spraying
+## 4. Password Spraying
 Técnica que tenta **uma senha muito provável** contra **vários usuários**.  
 Evita bloqueios por tentativas consecutivas falhas.
 
@@ -168,6 +168,6 @@ Exemplo de cenário:
 
 ---
 
-# ✔️ Conclusão
+# Conclusão
 Para um profissional de cibersegurança é **essencial** compreender ferramentas e técnicas de brute force, scanning e enumeração para entender como invasores agem — e, principalmente, como defender sistemas.  
 O Kali Linux oferece um ambiente completo para estudos ofensivos de forma ética e controlada.
